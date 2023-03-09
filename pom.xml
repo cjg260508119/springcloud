@@ -25,6 +25,7 @@
         <module>springcloud_redis</module>
         <module>springcloud_pool</module>
         <module>springcloud_sphere</module>
+        <module>springcloud_netty</module>
     </modules>
 
     <properties>

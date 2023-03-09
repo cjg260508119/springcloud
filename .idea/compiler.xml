@@ -11,6 +11,7 @@
         <module name="demo-spring-boot-starter" />
         <module name="springcloud_eureka" />
         <module name="springcloud_redis" />
+        <module name="springcloud_netty" />
         <module name="springcloud_socket" />
         <module name="springcloud_pool" />
         <module name="springcloud_sphere" />
@@ -23,6 +24,7 @@
       <module name="demo-spring-boot-starter" options="-parameters" />
       <module name="springcloud_eureka" options="-parameters" />
       <module name="springcloud_eureka_client" options="" />
+      <module name="springcloud_netty" options="-parameters" />
       <module name="springcloud_pool" options="-parameters" />
       <module name="springcloud_redis" options="-parameters" />
       <module name="springcloud_ribbon" options="-parameters" />
