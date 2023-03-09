@@ -1,0 +1,9 @@
+# Project exclude paths
+/demo-spring-boot-starter/target/
+/springcloud_eureka/target/
+/springcloud_eureka_client/target/
+/springcloud_pool/target/
+/springcloud_redis/target/
+/springcloud_ribbon/target/
+/springcloud_service/target/
+/springcloud_socket/target/
