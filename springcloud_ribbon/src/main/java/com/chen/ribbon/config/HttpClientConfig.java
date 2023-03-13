@@ -114,7 +114,7 @@ public class HttpClientConfig {
     }
 
     @Bean
-    //@LoadBalanced
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate(clientHttpRequestFactory());
     }
