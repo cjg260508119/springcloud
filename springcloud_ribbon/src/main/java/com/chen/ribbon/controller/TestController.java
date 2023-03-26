@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,6 +24,10 @@ public class TestController {
     @RequestMapping("/ribbon/test")
     public Map<String,String> test(){
 
-        return restTemplate.getForObject("http://service/service/test", Map.class);
+        Map<String, String> map = new HashMap<>();
+        map.put("test","test");
+        return map;
+
+        //return restTemplate.getForObject("http://service/service/test", Map.class);
     }
 }

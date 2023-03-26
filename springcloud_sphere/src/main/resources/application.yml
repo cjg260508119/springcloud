@@ -1,0 +1,74 @@
+server:
+  port: 8766
+
+#spring:
+#  application:
+#    name: shpere
+  # datasource 数据源配置内容，对应 DataSourceProperties 配置属性类
+#  datasource:
+#    url: jdbc:mysql://192.168.134.128:3306/atguigu_master_salve?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root # 数据库账号
+#    password: cjg260508119
+#    type: com.alibaba.druid.pool.DruidDataSource # 设置类型为 DruidDataSource
+    # Druid 自定义配置，对应 DruidDataSource 中的 setting 方法的属性
+#    druid:
+#      min-idle: 0 # 池中维护的最小空闲连接数，默认为 0 个。
+#      max-active: 20 # 池中最大连接数，包括闲置和使用中的连接，默认为 8 个。
+
+
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    schema: classpath:db/schema-h2.sql
+#    username: root
+#    password: test
+#  sql:
+#    init:
+#      schema-locations: classpath:db/schema-h2.sql
+#      data-locations: classpath:db/data-h2.sql
+
+eureka:
+  instance:
+    prefer-ip-address: true  #配置是否显示ip地址,默认为false
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}  #注册服务列表显示ip+端口
+  client:
+    # 跟上面一样，需要指向Eureka服务端地址，这样才能进行注册
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+mall:
+  # 主从数据源配置
+  datasource:
+    dynamic:
+      master:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.134.128:3306/atguigu_master_salve?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        userName: root
+        password: cjg260508119
+      slave:
+        enabled: true  # 是否启用从数据源
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.134.129:3306/atguigu_master_salve?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+        userName: root
+        password: cjg260508119
+
+# mybatis-plus 配置
+mybatis-plus:
+  configuration:
+    # 开启驼峰
+    map-underscore-to-camel-case: true
+    # 关闭一级缓存
+    local-cache-scope: statement
+    # 关闭二级缓存
+    cache-enabled: false
+  # sql xml文件映射路径
+  mapper-locations: classpath*:/mapper/*.xml
+  # MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名
+  type-aliases-package: com.chen.sphere.entity
+
+
+
+
+
+
+
