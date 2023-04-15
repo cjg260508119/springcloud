@@ -26,6 +26,7 @@
         <module>springcloud_pool</module>
         <module>springcloud_sphere</module>
         <module>springcloud_netty</module>
+        <module>springcloud_annotation</module>
     </modules>
 
     <properties>

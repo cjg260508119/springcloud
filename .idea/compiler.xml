@@ -11,6 +11,7 @@
         <module name="demo-spring-boot-starter" />
         <module name="springcloud_eureka" />
         <module name="springcloud_redis" />
+        <module name="springcloud_annotation" />
         <module name="springcloud_netty" />
         <module name="springcloud_socket" />
         <module name="springcloud_pool" />
@@ -22,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo-spring-boot-starter" options="-parameters" />
+      <module name="springcloud_annotation" options="-parameters" />
       <module name="springcloud_eureka" options="-parameters" />
       <module name="springcloud_eureka_client" options="" />
       <module name="springcloud_netty" options="-parameters" />
