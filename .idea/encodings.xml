@@ -7,7 +7,9 @@
     <file url="file://$PROJECT_DIR$/springcloud_eureka_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_eureka_client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_newfeture/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_pool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_rabbitmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_ribbon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_ribbon/src/main/resources" charset="UTF-8" />

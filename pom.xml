@@ -27,6 +27,8 @@
         <module>springcloud_sphere</module>
         <module>springcloud_netty</module>
         <module>springcloud_annotation</module>
+        <module>springcloud_rabbitmq</module>
+        <module>springcloud_newfeture</module>
     </modules>
 
     <properties>
