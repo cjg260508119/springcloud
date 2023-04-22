@@ -24,10 +24,10 @@ public class TestController {
     @RequestMapping("/ribbon/test")
     public Map<String,String> test(){
 
-        Map<String, String> map = new HashMap<>();
+        /*Map<String, String> map = new HashMap<>();
         map.put("test","test");
-        return map;
+        return map;*/
 
-        //return restTemplate.getForObject("http://service/service/test", Map.class);
+        return restTemplate.getForObject("http://service/service/test", Map.class);
     }
 }

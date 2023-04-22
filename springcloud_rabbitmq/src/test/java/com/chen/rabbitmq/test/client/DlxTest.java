@@ -8,21 +8,24 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @ClassName:RabbitMQProducer
+ * @ClassName:DlxTest
  * @Auther: 26050
- * @Description:
- * @Date: 2023/4/17 10:39
+ * @Description: 测试死信队列
+ * @Date: 2023/4/19 18:56
  * @Version: v1.0
  */
-public class RabbitMQProducer {
+public class DlxTest {
+
     private static final String IP_ADDRESS = "127.0.0.1";
     private static final Integer PORT = 5672;
     private static final String USERNAME = "admin";
     private static final String PASSWORD = "cjg260508119";
+    private static final String EXCHANGE_NORMAL_NAME = "exchange_normal_demo";
+    public static final String QUEUE_NOMARL_NAME = "queue_normal_demo";
+    private static final String ROUTING_NORMAL_KEY = "routingkey_normal_demo";
 
-    private static final String EXCHANGE_NAME = "exchange_demo1";
-    private static final String ROUTING_KEY = "routingkey_demo1";
-    public static final String QUEUE_NAME = "queue_demo1"; // 只有 QUEUE_NAME 需要共享给 RabbitMQConsumer
+    private static final String EXCHANGE_DLX_NAME = "exchange_dlx_demo";
+    public static final String QUEUE_DLX_NAME = "queue_dlx_demo";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         // 创建连接
@@ -53,22 +56,17 @@ public class RabbitMQProducer {
                     null, null, null, null,
                     null, null);*/
             AMQP.BasicProperties.Builder builder =  new AMQP.BasicProperties.Builder();
-            builder.expiration("10000");
+            //builder.expiration("10000");
             builder.deliveryMode(2);
             builder.contentType("text/plain");
-            channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, mandatory, builder.build(), message.getBytes());
+            channel.basicPublish(EXCHANGE_NORMAL_NAME, ROUTING_NORMAL_KEY, mandatory, builder.build(), message.getBytes());
 
         }
-
-        /*try {
-            Thread.sleep(100000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }*/
         // 关闭
         channel.close();
         connection.close();
     }
+
     public static Connection getConnection() throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(IP_ADDRESS);
@@ -78,20 +76,26 @@ public class RabbitMQProducer {
         return factory.newConnection();
     }
 
-    // 创建 RabbitMQ Exchange 和 Queue ，然后使用 ROUTING_KEY 路由键将两者绑定。
-    // 该步骤，其实可以在 RabbitMQ Management 上操作，并不一定需要在代码中
     private static void initExchangeAndQueue(Channel channel) throws IOException {
-        // 创建交换器：direct、持久化、不自动删除
-        channel.exchangeDeclare(EXCHANGE_NAME, "direct", true, false, null);
+        // 创建死信交换器：direct、持久化、不自动删除
+        channel.exchangeDeclare(EXCHANGE_DLX_NAME, "direct", true, false, null);
+        //创建死信队列
+        channel.queueDeclare(QUEUE_DLX_NAME, true, false, false, null);
+        channel.queueBind(QUEUE_DLX_NAME, EXCHANGE_DLX_NAME, ROUTING_NORMAL_KEY);
 
+        // 创建交换器：direct、持久化、不自动删除
+        channel.exchangeDeclare(EXCHANGE_NORMAL_NAME, "direct", true, false, null);
         // 创建队列：持久化、非排他、非自动删除的队列
         //设置ttl过期时间（通过队列的方式）
         Map<String, Object> argss = new HashMap<>();
         //时间为毫秒
-        //argss.put("x-message-ttl", 5000);
-        channel.queueDeclare(QUEUE_NAME, true, false, false, argss);
-
+        argss.put("x-message-ttl", 5000);
+        argss.put("x-dead-letter-exchange", EXCHANGE_DLX_NAME);
+        argss.put("x-dead-letter-routing-key", ROUTING_NORMAL_KEY);
+        channel.queueDeclare(QUEUE_NOMARL_NAME, true, false, false, argss);
         // 将交换器与队列通过路由键绑定
-        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, ROUTING_KEY);
+        channel.queueBind(QUEUE_NOMARL_NAME, EXCHANGE_NORMAL_NAME, ROUTING_NORMAL_KEY);
+
+
     }
 }

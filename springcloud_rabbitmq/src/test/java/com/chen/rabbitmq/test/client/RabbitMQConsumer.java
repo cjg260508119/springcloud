@@ -31,6 +31,7 @@ public class RabbitMQConsumer {
                 // 打印日志
                 System.out.println(String.format("[线程：%s][路由键：%s][消息内容：%s]",
                         Thread.currentThread(), envelope.getRoutingKey(), new String(body)));
+                System.out.println(properties.getMessageId());
                 // ack 消息已经消费
                 channel.basicAck(envelope.getDeliveryTag(), false);
             }
