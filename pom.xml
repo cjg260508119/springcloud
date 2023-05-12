@@ -29,6 +29,7 @@
         <module>springcloud_annotation</module>
         <module>springcloud_rabbitmq</module>
         <module>springcloud_newfeture</module>
+        <module>springcloud_gctest</module>
     </modules>
 
     <properties>

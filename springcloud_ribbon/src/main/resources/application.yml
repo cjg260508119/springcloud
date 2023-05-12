@@ -14,3 +14,14 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+#include的值也可以改成*，但建议还是最小暴露原则，用啥开启啥
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,conditions,metrics,prometheus
+#启用配置里的info开头的变量
+  info:
+    env:
+      enabled: true
+
