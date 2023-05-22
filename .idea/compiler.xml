@@ -10,15 +10,16 @@
         <module name="springcloud_service" />
         <module name="springcloud_rabbitmq" />
         <module name="demo-spring-boot-starter" />
+        <module name="springcloud_socket" />
+        <module name="springcloud_pool" />
+        <module name="springcloud_ribbon" />
         <module name="springcloud_eureka" />
         <module name="springcloud_redis" />
         <module name="springcloud_annotation" />
         <module name="springcloud_netty" />
-        <module name="springcloud_socket" />
-        <module name="springcloud_pool" />
+        <module name="springcloud_gctest" />
         <module name="springcloud_sphere" />
         <module name="springcloud_newfeture" />
-        <module name="springcloud_ribbon" />
       </profile>
     </annotationProcessing>
   </component>
@@ -28,6 +29,7 @@
       <module name="springcloud_annotation" options="-parameters" />
       <module name="springcloud_eureka" options="-parameters" />
       <module name="springcloud_eureka_client" options="" />
+      <module name="springcloud_gctest" options="-parameters" />
       <module name="springcloud_netty" options="-parameters" />
       <module name="springcloud_newfeture" options="-parameters" />
       <module name="springcloud_pool" options="-parameters" />
