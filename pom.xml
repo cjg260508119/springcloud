@@ -31,6 +31,7 @@
         <module>springcloud_newfeture</module>
         <module>springcloud_gctest</module>
         <module>springcloud_ribbonold</module>
+        <module>springcloud_sphere</module>
     </modules>
 
     <properties>
