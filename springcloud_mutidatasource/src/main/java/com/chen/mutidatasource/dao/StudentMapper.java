@@ -1,7 +1,7 @@
-package com.chen.sphere.dao;
+package com.chen.mutidatasource.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.chen.sphere.entity.Student;
+import com.chen.mutidatasource.entity.Student;
 
 /**
  * @ClassName:UserMapper

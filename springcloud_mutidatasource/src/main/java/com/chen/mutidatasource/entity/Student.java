@@ -1,4 +1,4 @@
-package com.chen.sphere.entity;
+package com.chen.mutidatasource.entity;
 
 import lombok.Data;
 

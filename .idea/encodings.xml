@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/springcloud_eureka_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_eureka_client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_gctest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_mutidatasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_mutidatasource/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_netty/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_newfeture/src/main/java" charset="UTF-8" />
@@ -22,12 +24,11 @@
     <file url="file://$PROJECT_DIR$/springcloud_redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_ribbon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_ribbon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_ribbonold/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_socket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud_socket/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud_sphere/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud_sphere/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

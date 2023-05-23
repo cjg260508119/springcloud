@@ -1,4 +1,4 @@
-package com.chen.sphere.datasource;
+package com.chen.mutidatasource.datasource;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -24,12 +24,13 @@
         <module>springcloud_socket</module>
         <module>springcloud_redis</module>
         <module>springcloud_pool</module>
-        <module>springcloud_sphere</module>
+        <module>springcloud_mutidatasource</module>
         <module>springcloud_netty</module>
         <module>springcloud_annotation</module>
         <module>springcloud_rabbitmq</module>
         <module>springcloud_newfeture</module>
         <module>springcloud_gctest</module>
+        <module>springcloud_ribbonold</module>
     </modules>
 
     <properties>

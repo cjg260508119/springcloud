@@ -13,6 +13,7 @@
         <module name="springcloud_socket" />
         <module name="springcloud_pool" />
         <module name="springcloud_ribbon" />
+        <module name="springcloud_ribbonold" />
         <module name="springcloud_eureka" />
         <module name="springcloud_redis" />
         <module name="springcloud_annotation" />
@@ -36,6 +37,7 @@
       <module name="springcloud_rabbitmq" options="-parameters" />
       <module name="springcloud_redis" options="-parameters" />
       <module name="springcloud_ribbon" options="-parameters" />
+      <module name="springcloud_ribbonold" options="-parameters" />
       <module name="springcloud_service" options="-parameters" />
       <module name="springcloud_socket" options="-parameters" />
       <module name="springcloud_sphere" options="-parameters" />

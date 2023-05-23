@@ -1,7 +1,7 @@
-package com.chen.sphere.controller;
+package com.chen.mutidatasource.controller;
 
-import com.chen.sphere.dao.StudentMapper;
-import com.chen.sphere.entity.Student;
+import com.chen.mutidatasource.dao.StudentMapper;
+import com.chen.mutidatasource.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +19,7 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    StudentMapper studentMapper;
+    private StudentMapper studentMapper;
 
     @RequestMapping("/shpere/test")
     public List<Student> test(){

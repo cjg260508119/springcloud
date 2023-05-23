@@ -1,7 +1,7 @@
 package com.chen.sphere.test;
 
-import com.chen.sphere.dao.StudentMapper;
-import com.chen.sphere.entity.Student;
+import com.chen.mutidatasource.dao.StudentMapper;
+import com.chen.mutidatasource.entity.Student;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
