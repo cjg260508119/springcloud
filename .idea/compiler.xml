@@ -12,6 +12,7 @@
         <module name="demo-spring-boot-starter" />
         <module name="springcloud_socket" />
         <module name="springcloud_pool" />
+        <module name="springcloud_mutidatasource" />
         <module name="springcloud_ribbon" />
         <module name="springcloud_ribbonold" />
         <module name="springcloud_eureka" />
@@ -31,6 +32,7 @@
       <module name="springcloud_eureka" options="-parameters" />
       <module name="springcloud_eureka_client" options="" />
       <module name="springcloud_gctest" options="-parameters" />
+      <module name="springcloud_mutidatasource" options="-parameters" />
       <module name="springcloud_netty" options="-parameters" />
       <module name="springcloud_newfeture" options="-parameters" />
       <module name="springcloud_pool" options="-parameters" />
