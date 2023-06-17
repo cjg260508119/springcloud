@@ -1,0 +1,14 @@
+server:
+  port: 8766
+
+spring:
+  application:
+    name: redis
+#  redis:
+#    host: localhost
+#    port: 26380
+#    password: Cjg260508119
+#    data:
+#      redis:
+#        repositories:
+#          enabled: false

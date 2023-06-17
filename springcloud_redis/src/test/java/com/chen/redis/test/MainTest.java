@@ -26,9 +26,9 @@ public class MainTest {
         JedisPool pool = new JedisPool("localhost", 26380, "default", "Cjg260508119");
         //pool.setMaxIdle(100000);
         try (Jedis jedis = pool.getResource()) {
-            //jedis.set("clientName", "Jedis");
-            //System.out.println(jedis.get("clientName"));
-            jedis.bitfield("bitf", "01010010101");
+            jedis.set("clientName", "Jedis");
+            System.out.println(jedis.get("clientName"));
+            //jedis.bitfield("bitf", "01010010101");
         }
 
 

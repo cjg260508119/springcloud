@@ -28,6 +28,6 @@ public class TestController {
         map.put("test","test");
         return map;*/
 
-        return restTemplate.getForObject("http://service/service/test", Map.class);
+        return restTemplate.getForObject("http://ribbonold/ribbonold/test/test", Map.class);
     }
 }

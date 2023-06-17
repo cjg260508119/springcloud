@@ -6,11 +6,13 @@ eureka:
     hostname: peer1
   client:
     #支持高可用配置，把自身注册到eureka注册中心
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       #defaultZone: http://peer1:8761/eureka/
+  server:
+    enable-self-preservation: false
 
 spring:
   application:
